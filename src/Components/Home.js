@@ -5,7 +5,7 @@ import TextField from "@material-ui/core/TextField";
 
 export class Home extends Component {
   state = {
-    id: "",
+    username: "",
     password: ""
   };
 
@@ -14,7 +14,7 @@ export class Home extends Component {
   };
 
   render() {
-    const link = "/login/" + this.state.id;
+    const link = "/login/" + this.state.username;
 
     return (
       <div className="App">
@@ -23,9 +23,9 @@ export class Home extends Component {
 
           <div className="form">
             <TextField
-              placeholder="Enter Your First Name"
-              label="First Name"
-              onChange={this.handleChange("id")}
+              placeholder="Enter Your Username"
+              label="Username"
+              onChange={this.handleChange("username")}
               //defaultValue={"Álvaro"}
               margin="normal"
               color="secondary"
@@ -45,7 +45,7 @@ export class Home extends Component {
             variant="contained"
             color="default"
             href={link}
-            disabled={this.state.id && this.state.password ? false : true}
+            disabled={this.state.username && this.state.password ? false : true}
           >
             Login
           </Button>

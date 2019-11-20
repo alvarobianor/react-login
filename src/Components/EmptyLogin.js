@@ -9,7 +9,7 @@ function Login() {
     <div className="App">
       <header className="header">
         <p className="text">
-          Ops... You can't login with a empty name or password!
+          Ops... You can't login with a empty username or password!
         </p>
         <hr></hr>
         <Button variant="contained" color="default" href="/">
